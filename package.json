@@ -1,5 +1,5 @@
 {
-  "name": "alexa-flash-briefing-qbuzz",
+  "name": "alexa-flash-briefing-309-vertrektijden",
   "version": "1.0.0",
   "description": "This gateway-service pulls the bus times for Qbuzz 309",
   "main": "handler.js",
