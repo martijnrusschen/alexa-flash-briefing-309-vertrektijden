@@ -52,7 +52,8 @@ module.exports.feed = (event, context, callback) => {
                   var diff = diff_minutes(departure, now)
 
                   // We need to substract 60 minutes because of time zone differences
-                  var normalized_diff = diff - 60
+                  // We need to substract 120 minutes because of DST
+                  var normalized_diff = diff - 120
 
                   nextDepartures.push(normalized_diff)
                 }
