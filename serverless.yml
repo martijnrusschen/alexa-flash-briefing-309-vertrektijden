@@ -1,0 +1,33 @@
+# Welcome to serverless. Read the docs
+# https://serverless.com/framework/docs/
+
+# Serverless.yml is the configuration the CLI
+# uses to deploy your code to your provider of choice
+
+# The `service` block is the name of the service
+service: serverless-flash-briefing-qbuzz
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  stage: prod
+  runtime: nodejs6.10
+  region: eu-west-1
+  memorySize: 512
+  timeout: 8
+  versionFunctions: false
+  environment:
+    OV_VERTREKTIJDEN_API: ${ssm:OvVertrektijdenApi}
+    # To fetch key: `aws ssm get-parameter --name OvVertrektijdenApi`
+
+# The `functions` block defines what code to deploy
+functions:
+  feed:
+    name: ${self:service}-prod-feed
+    handler: handler.feed
+    # The `events` block defines how to trigger the handler.helloWorld code
+    events:
+      - http:
+          path: feed
+          method: get
+          cors: true

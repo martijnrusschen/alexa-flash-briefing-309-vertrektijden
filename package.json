@@ -1,0 +1,16 @@
+{
+  "name": "alexa-flash-briefing-qbuzz",
+  "version": "1.0.0",
+  "description": "This gateway-service pulls the bus times for Qbuzz 309",
+  "main": "handler.js",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martijn Russchen",
+  "license": "MIT"
+}
