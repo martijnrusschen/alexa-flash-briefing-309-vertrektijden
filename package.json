@@ -5,7 +5,7 @@
   "main": "handler.js",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "request": "^2.85.0"
+    "request": "^2.86.0"
   },
   "devDependencies": {},
   "scripts": {
